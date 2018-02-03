@@ -1,0 +1,44 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1dff730 .scope module, "morgan" "morgan" 2 3;
+ .timescale 0 0;
+v0x1e44790_0 .var "A", 0 0;
+v0x1e44860_0 .net "AnandB", 0 0, L_0x1e449c0; 1 drivers
+v0x1e44910_0 .var "B", 0 0;
+S_0x1dff820 .scope module, "dut" "demorgan" 2 8, 3 1, S_0x1dff730;
+ .timescale 0 0;
+L_0x1e449c0 .functor NAND 1, v0x1e44790_0, v0x1e44910_0, C4<1>, C4<1>;
+v0x1e001a0_0 .net "A", 0 0, v0x1e44790_0; 1 drivers
+v0x1e44650_0 .alias "AnandB", 0 0, v0x1e44860_0;
+v0x1e446f0_0 .net "B", 0 0, v0x1e44910_0; 1 drivers
+    .scope S_0x1dff730;
+T_0 ;
+    %vpi_call 2 11 "$display", "A B | ~(AB)";
+    %set/v v0x1e44790_0, 0, 1;
+    %set/v v0x1e44910_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 13 "$display", "%b  | %b  | %b", v0x1e44790_0, v0x1e44910_0, v0x1e44860_0;
+    %set/v v0x1e44790_0, 0, 1;
+    %set/v v0x1e44910_0, 1, 1;
+    %delay 1, 0;
+    %vpi_call 2 15 "$display", "%b  | %b  | %b", v0x1e44790_0, v0x1e44910_0, v0x1e44860_0;
+    %set/v v0x1e44790_0, 1, 1;
+    %set/v v0x1e44910_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 17 "$display", "%b  | %b  | %b", v0x1e44790_0, v0x1e44910_0, v0x1e44860_0;
+    %set/v v0x1e44790_0, 1, 1;
+    %set/v v0x1e44910_0, 1, 1;
+    %delay 1, 0;
+    %vpi_call 2 19 "$display", "%b  | %b  | %b", v0x1e44790_0, v0x1e44910_0, v0x1e44860_0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "nand_ab.t.v";
+    "./nand_ab.v";
