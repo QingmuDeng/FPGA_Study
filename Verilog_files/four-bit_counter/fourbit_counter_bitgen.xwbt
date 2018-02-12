@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/josh/ComArch/FPGA_Study/Verilog_files/four-bit_counter/fourbit_counter.ncd
+OUTFILE=/home/josh/ComArch/FPGA_Study/Verilog_files/four-bit_counter/fourbit_counter.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/josh/ComArch/FPGA_Study/Verilog_files/four-bit_counter
+LICENSE=WebPack
+USER_INFO=211475887_0_0_838
