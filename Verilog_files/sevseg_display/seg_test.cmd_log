@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/sevseg_display/seg_test.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/sevseg_display/seg_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm seg_test.bmm -p xc6slx9-tqg144-2 seg_test.ngc seg_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o seg_test_map.ncd seg_test.ngd seg_test.pcf 
+par -w -intstyle ise -ol high -mt off seg_test_map.ncd seg_test.ncd seg_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml seg_test.twx seg_test.ncd -o seg_test.twr seg_test.pcf 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/sevseg_display/seg_test.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/sevseg_display/seg_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 seg_test.ngc seg_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o seg_test_map.ncd seg_test.ngd seg_test.pcf 
+par -w -intstyle ise -ol high -mt off seg_test_map.ncd seg_test.ncd seg_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml seg_test.twx seg_test.ncd -o seg_test.twr seg_test.pcf 
+bitgen -intstyle ise -f seg_test.ut seg_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevseg.ucf -p xc6slx9-tqg144-2 seg_test.ngc seg_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o seg_test_map.ncd seg_test.ngd seg_test.pcf 
+par -w -intstyle ise -ol high -mt off seg_test_map.ncd seg_test.ncd seg_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml seg_test.twx seg_test.ncd -o seg_test.twr seg_test.pcf -ucf sevseg.ucf 
+bitgen -intstyle ise -f seg_test.ut seg_test.ncd 
