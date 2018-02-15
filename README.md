@@ -9,3 +9,7 @@ SP 2018 - Josh's Independent Study on FPGA
 #### By Verilog Code:
   * [Data Selector](https://github.com/QingmuDeng/FPGA_Study/tree/master/Verilog_files/data_selector)
   * [8-bit Counter](https://github.com/QingmuDeng/FPGA_Study/tree/master/Verilog_files/four-bit_counter)
+
+
+
+*Last updated: 2/14/2018*
