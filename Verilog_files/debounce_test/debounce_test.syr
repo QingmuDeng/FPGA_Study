@@ -1,0 +1,447 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: debounce_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "debounce_test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "debounce_test"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : debounce_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" into library work
+Parsing verilog file "debounce.v" included at line 21.
+Parsing module <debouncer>.
+Parsing module <debounce_test>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" Line 35: Port state is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" Line 36: Port state is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" Line 37: Port trans_up is not connected to this instance
+
+Elaborating module <debounce_test>.
+
+Elaborating module <debouncer>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <debounce_test>.
+    Related source file is "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v".
+INFO:Xst:3210 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" line 35: Output port <state> of the instance <d1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" line 35: Output port <trans_up> of the instance <d1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" line 36: Output port <state> of the instance <d2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" line 36: Output port <trans_dn> of the instance <d2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" line 37: Output port <trans_up> of the instance <d3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce_test.v" line 37: Output port <trans_dn> of the instance <d3> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <led_b>.
+    Found 1-bit register for signal <led_c>.
+    Found 1-bit register for signal <led_d>.
+    Found 1-bit register for signal <led_a>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <debounce_test> synthesized.
+
+Synthesizing Unit <debouncer>.
+    Related source file is "/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/debounce.v".
+    Found 1-bit register for signal <sync_1>.
+    Found 17-bit register for signal <count>.
+    Found 1-bit register for signal <state>.
+    Found 1-bit register for signal <sync_0>.
+    Found 17-bit adder for signal <count[16]_GND_2_o_add_5_OUT> created at line 48.
+    Found 1-bit comparator equal for signal <idle> created at line 40
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <debouncer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 17-bit adder                                          : 3
+# Registers                                            : 16
+ 1-bit register                                        : 13
+ 17-bit register                                       : 3
+# Comparators                                          : 3
+ 1-bit comparator equal                                : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <debouncer>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <debouncer> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 17-bit up counter                                     : 3
+# Registers                                            : 13
+ Flip-Flops                                            : 13
+# Comparators                                          : 3
+ 1-bit comparator equal                                : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <debounce_test> ...
+
+Optimizing unit <debouncer> ...
+INFO:Xst:2261 - The FF/Latch <d3/sync_0> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/sync_0> 
+INFO:Xst:2261 - The FF/Latch <d3/sync_1> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/sync_1> 
+INFO:Xst:2261 - The FF/Latch <d3/count_10> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_10> 
+INFO:Xst:2261 - The FF/Latch <d3/count_11> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_11> 
+INFO:Xst:2261 - The FF/Latch <d3/count_12> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_12> 
+INFO:Xst:2261 - The FF/Latch <d3/count_13> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_13> 
+INFO:Xst:2261 - The FF/Latch <d3/count_14> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_14> 
+INFO:Xst:2261 - The FF/Latch <d3/count_15> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_15> 
+INFO:Xst:2261 - The FF/Latch <d3/count_16> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_16> 
+INFO:Xst:2261 - The FF/Latch <d3/count_0> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_0> 
+INFO:Xst:2261 - The FF/Latch <d3/count_1> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_1> 
+INFO:Xst:2261 - The FF/Latch <d3/count_2> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_2> 
+INFO:Xst:2261 - The FF/Latch <d3/count_3> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_3> 
+INFO:Xst:2261 - The FF/Latch <d3/count_4> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_4> 
+INFO:Xst:2261 - The FF/Latch <d3/count_5> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_5> 
+INFO:Xst:2261 - The FF/Latch <d3/count_6> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_6> 
+INFO:Xst:2261 - The FF/Latch <d3/count_7> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_7> 
+INFO:Xst:2261 - The FF/Latch <d3/count_8> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_8> 
+INFO:Xst:2261 - The FF/Latch <d3/count_9> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/count_9> 
+INFO:Xst:2261 - The FF/Latch <d3/state> in Unit <debounce_test> is equivalent to the following FF/Latch, which will be removed : <d1/state> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block debounce_test, actual ratio is 1.
+
+Final Macro Processing ...
+
+Processing Unit <debounce_test> :
+	Found 2-bit shift register for signal <d3/sync_1>.
+	Found 2-bit shift register for signal <d2/sync_1>.
+Unit <debounce_test> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 40
+ Flip-Flops                                            : 40
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : debounce_test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 121
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 32
+#      LUT2                        : 9
+#      LUT4                        : 2
+#      LUT5                        : 2
+#      LUT6                        : 6
+#      MUXCY                       : 32
+#      VCC                         : 1
+#      XORCY                       : 34
+# FlipFlops/Latches                : 42
+#      FD                          : 6
+#      FDE                         : 2
+#      FDR                         : 34
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 7
+#      IBUF                        : 3
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              42  out of  11440     0%  
+ Number of Slice LUTs:                   55  out of   5720     0%  
+    Number used as Logic:                53  out of   5720     0%  
+    Number used as Memory:                2  out of   1440     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     56
+   Number with an unused Flip Flop:      14  out of     56    25%  
+   Number with an unused LUT:             1  out of     56     1%  
+   Number of fully used LUT-FF pairs:    41  out of     56    73%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    102     7%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 44    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.134ns (Maximum Frequency: 241.896MHz)
+   Minimum input arrival time before clock: 2.442ns
+   Maximum output required time after clock: 4.162ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.134ns (frequency: 241.896MHz)
+  Total number of paths / destination ports: 458 / 76
+-------------------------------------------------------------------------
+Delay:               4.134ns (Levels of Logic = 3)
+  Source:            d2/count_13 (FF)
+  Destination:       led_b (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: d2/count_13 to led_b
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.525   1.156  d2/count_13 (d2/count_13)
+     LUT5:I0->O            2   0.254   0.954  d2/out1 (d2/out)
+     LUT6:I3->O            1   0.235   0.682  d2/trans_up1 (s_b_up)
+     LUT2:I1->O            1   0.254   0.000  led_b_rstpot (led_b_rstpot)
+     FD:D                      0.074          led_b
+    ----------------------------------------
+    Total                      4.134ns (1.342ns logic, 2.792ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              2.442ns (Levels of Logic = 2)
+  Source:            switch_c (PAD)
+  Destination:       led_d (FF)
+  Destination Clock: CLK rising
+
+  Data Path: switch_c to led_d
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.790  switch_c_IBUF (switch_c_IBUF)
+     LUT2:I0->O            1   0.250   0.000  led_d_rstpot (led_d_rstpot)
+     FD:D                      0.074          led_d
+    ----------------------------------------
+    Total                      2.442ns (1.652ns logic, 0.790ns route)
+                                       (67.6% logic, 32.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            led_a (FF)
+  Destination:       led_a (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: led_a to led_a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  led_a (led_a_OBUF)
+     OBUF:I->O                 2.912          led_a_OBUF (led_a)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.134|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.35 secs
+ 
+--> 
+
+
+Total memory usage is 386460 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
+

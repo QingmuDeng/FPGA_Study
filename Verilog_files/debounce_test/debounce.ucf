@@ -1,0 +1,8 @@
+NET "clk" LOC = P56 | CLOCK_DEDICATED_ROUTE=TRUE;
+NET "led_a" LOC = P97;
+NET "led_b" LOC = P98;
+NET "led_c" LOC = P94;
+NET "led_d" LOC = P95;
+NET "switch_a" LOC = P142 | PULLDOWN;
+NET "switch_b" LOC = P138 | PULLDOWN;
+NET "switch_c" LOC = P137 | PULLDOWN;

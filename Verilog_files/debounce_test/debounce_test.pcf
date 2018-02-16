@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Feb 16 12:34:19 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led_a" LOCATE = SITE "P97" LEVEL 1;
+COMP "led_b" LOCATE = SITE "P98" LEVEL 1;
+COMP "switch_a" LOCATE = SITE "P142" LEVEL 1;
+COMP "switch_b" LOCATE = SITE "P138" LEVEL 1;
+COMP "switch_c" LOCATE = SITE "P137" LEVEL 1;
+COMP "led_c" LOCATE = SITE "P94" LEVEL 1;
+COMP "led_d" LOCATE = SITE "P95" LEVEL 1;
+COMP "CLK" LOCATE = SITE "P56" LEVEL 1;
+PIN CLK_pin<0> = BEL "CLK" PINNAME PAD;
+PIN "CLK_pin<0>" CLOCK_DEDICATED_ROUTE;
+SCHEMATIC END;
+

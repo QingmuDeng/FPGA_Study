@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v" Line 34: Port <arg fmt="%s" index="1">state</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v" Line 36: Port <arg fmt="%s" index="1">state</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v" Line 38: Port <arg fmt="%s" index="1">trans_up</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"debouncer.v" Line 48: Result of <arg fmt="%d" index="1">18</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">17</arg>-bit target.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%d" index="2">34</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">d1</arg>&gt; of block &lt;<arg fmt="%s" index="4">debouncer</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">debuonce_test</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%d" index="2">36</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">d2</arg>&gt; of block &lt;<arg fmt="%s" index="4">debouncer</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">debuonce_test</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%d" index="2">38</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">d3</arg>&gt; of block &lt;<arg fmt="%s" index="4">debouncer</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">debuonce_test</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%s" index="2">34</arg>: Output port &lt;<arg fmt="%s" index="3">state</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">d1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%s" index="2">34</arg>: Output port &lt;<arg fmt="%s" index="3">trans_up</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">d1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%s" index="2">36</arg>: Output port &lt;<arg fmt="%s" index="3">state</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">d2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%s" index="2">36</arg>: Output port &lt;<arg fmt="%s" index="3">trans_dn</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">d2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%s" index="2">38</arg>: Output port &lt;<arg fmt="%s" index="3">trans_up</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">d3</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; line <arg fmt="%s" index="2">38</arg>: Output port &lt;<arg fmt="%s" index="3">trans_dn</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">d3</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+</messages>
+

@@ -1,0 +1,9 @@
+
+NET "CLK" = P56;
+
+NET "led_a" = P97;
+NET "led_b" = P98;
+NET "led_c" = P94;
+
+NET "switch_a" = P137 | PULLDOWN;
+NET "switch_b" = P140 | PULLDOWN;
