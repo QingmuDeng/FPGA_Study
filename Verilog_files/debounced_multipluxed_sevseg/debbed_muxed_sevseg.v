@@ -18,9 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+
+
 module debbed_muxed_sevseg(
 	
     );
-
-
+debouncer d1(.CLK(CLK));
+debouncer d2(.CLK(CLK));
+display_7_seg display(.CLK(CLK));
 endmodule

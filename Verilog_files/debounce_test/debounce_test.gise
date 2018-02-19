@@ -134,6 +134,8 @@
     <transform xil_pn:end_ts="1518802459" xil_pn:in_ck="1755824884461299164" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1518802453">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="debounce_test.pcf"/>
       <outfile xil_pn:name="debounce_test_map.map"/>

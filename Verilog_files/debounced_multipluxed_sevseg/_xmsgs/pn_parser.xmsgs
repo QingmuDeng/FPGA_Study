@@ -11,12 +11,5 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/josh/ComArch/FPGA_Study/Verilog_files/sevseg_display/debouncer.v&apos; in file &quot;/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debuonce_test.v&quot; line 21
-</arg>
-</msg>
-
 </messages>
 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-02-16T12:10:45</DateModified>
+  <DateModified>2018-02-19T16:37:27</DateModified>
   <ModuleName>debounce_test</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/iseconfig/debounce_test.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/josh/ComArch/FPGA_Study/Verilog_files/debounce_test/</ImplementationReportsDirectory>
   <DateInitialized>2018-02-16T11:29:01</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
