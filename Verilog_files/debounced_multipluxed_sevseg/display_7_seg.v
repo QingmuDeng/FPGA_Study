@@ -36,21 +36,21 @@ always @(posedge CLK)begin
 	prescaler <=prescaler + 23'd1;
 	if (prescaler >= 50000)begin
 		prescaler <= 0;
-		digit_posn <= digit_posn + 1;
-		if (digit_posn == 0'd0) begin
+		digit_posn <= digit_posn + 3'd1;
+		if (digit_posn == 3'd0) begin
 			digit_data <= units;
 			DIGIT <= 4'b1110;
 		end
-		if (digit_posn == 0'd1) begin
-			digit_data <= units;
+		if (digit_posn == 3'd1) begin
+			digit_data <= tens;
 			DIGIT <= 4'b1101;
 		end
-		if (digit_posn == 0'd2) begin
-			digit_data <= units;
+		if (digit_posn == 3'd2) begin
+			digit_data <= hundreds;
 			DIGIT <= 4'b1011;
 		end
-		if (digit_posn == 0'd3) begin
-			digit_data <= units;
+		if (digit_posn == 3'd3) begin
+			digit_data <= thousands;
 			DIGIT <= 4'b0111;
 		end
 

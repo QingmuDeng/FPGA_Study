@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-02-16T11:04:37</DateModified>
-  <ModuleName>debuonce_test</ModuleName>
+  <DateModified>2018-02-21T21:04:39</DateModified>
+  <ModuleName>debbed_muxed_sevseg</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/iseconfig/debbed_muxed_sevseg.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/</ImplementationReportsDirectory>
   <DateInitialized>2018-02-16T11:04:37</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

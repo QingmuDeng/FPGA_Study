@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc debbed_muxed_sevseg.ucf -p xc6slx9-tqg144-2 debbed_muxed_sevseg.ngc debbed_muxed_sevseg.ngd  
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc debbed_muxed_sevseg.ucf -p xc6slx9-tqg144-2 debbed_muxed_sevseg.ngc debbed_muxed_sevseg.ngd  
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc debbed_muxed_sevseg.ucf -p xc6slx9-tqg144-2 debbed_muxed_sevseg.ngc debbed_muxed_sevseg.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc debbed_muxed_sevseg.ucf -p xc6slx9-tqg144-2 debbed_muxed_sevseg.ngc debbed_muxed_sevseg.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc debbed_muxed_sevseg.ucf -p xc6slx9-tqg144-2 debbed_muxed_sevseg.ngc debbed_muxed_sevseg.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc debbed_muxed_sevseg.ucf -p xc6slx9-tqg144-2 debbed_muxed_sevseg.ngc debbed_muxed_sevseg.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o debbed_muxed_sevseg_map.ncd debbed_muxed_sevseg.ngd debbed_muxed_sevseg.pcf 
+par -w -intstyle ise -ol high -mt off debbed_muxed_sevseg_map.ncd debbed_muxed_sevseg.ncd debbed_muxed_sevseg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml debbed_muxed_sevseg.twx debbed_muxed_sevseg.ncd -o debbed_muxed_sevseg.twr debbed_muxed_sevseg.pcf -ucf debbed_muxed_sevseg.ucf 
+bitgen -intstyle ise -f debbed_muxed_sevseg.ut debbed_muxed_sevseg.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc debbed_muxed_sevseg.ucf -p xc6slx9-tqg144-2 debbed_muxed_sevseg.ngc debbed_muxed_sevseg.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o debbed_muxed_sevseg_map.ncd debbed_muxed_sevseg.ngd debbed_muxed_sevseg.pcf 
+par -w -intstyle ise -ol high -mt off debbed_muxed_sevseg_map.ncd debbed_muxed_sevseg.ncd debbed_muxed_sevseg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml debbed_muxed_sevseg.twx debbed_muxed_sevseg.ncd -o debbed_muxed_sevseg.twr debbed_muxed_sevseg.pcf -ucf debbed_muxed_sevseg.ucf 
+bitgen -intstyle ise -f debbed_muxed_sevseg.ut debbed_muxed_sevseg.ncd 
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/debounced_multipluxed_sevseg/debbed_muxed_sevseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc debbed_muxed_sevseg.ucf -p xc6slx9-tqg144-2 debbed_muxed_sevseg.ngc debbed_muxed_sevseg.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o debbed_muxed_sevseg_map.ncd debbed_muxed_sevseg.ngd debbed_muxed_sevseg.pcf 
+par -w -intstyle ise -ol high -mt off debbed_muxed_sevseg_map.ncd debbed_muxed_sevseg.ncd debbed_muxed_sevseg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml debbed_muxed_sevseg.twx debbed_muxed_sevseg.ncd -o debbed_muxed_sevseg.twr debbed_muxed_sevseg.pcf -ucf debbed_muxed_sevseg.ucf 
+bitgen -intstyle ise -f debbed_muxed_sevseg.ut debbed_muxed_sevseg.ncd 
