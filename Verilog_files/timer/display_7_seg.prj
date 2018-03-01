@@ -1,0 +1,2 @@
+verilog work "../sevseg_display/decoder_sevseg.v"
+verilog work "../debounced_multipluxed_sevseg/display_7_seg.v"

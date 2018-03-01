@@ -21,15 +21,15 @@
 module alarm(
 	input CLK,
 	input enable,
-	output reg BUZZER x
+	output reg BUZZER
     );
 	 
-reg [25:0] counter = 0;
+reg [25:0] counter;
 
 always @(posedge CLK) begin
 	counter <= counter + 1;
-	if (counter == 26'd50000000) begin
-		BUZZER <= ~ BUZZER;
+	if ((counter == 26'd10000000) & enable) begin
+		BUZZER <= ~(BUZZER);
 		counter <= 0;
 	end
 

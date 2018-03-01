@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/timer/display_7_seg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/timer/display_7_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc timer_ucf.ucf -p xc6slx9-tqg144-2 display_7_seg.ngc display_7_seg.ngd  
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/timer/display_7_seg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/timer/display_7_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc timer_ucf.ucf -p xc6slx9-tqg144-2 display_7_seg.ngc display_7_seg.ngd  
+xst -intstyle ise -ifn "/home/josh/ComArch/FPGA_Study/Verilog_files/timer/display_7_seg.xst" -ofn "/home/josh/ComArch/FPGA_Study/Verilog_files/timer/display_7_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc timer_ucf.ucf -p xc6slx9-tqg144-2 display_7_seg.ngc display_7_seg.ngd  

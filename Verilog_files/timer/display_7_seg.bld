@@ -1,0 +1,103 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc timer_ucf.ucf -p xc6slx9-tqg144-2
+display_7_seg.ngc display_7_seg.ngd
+
+Reading NGO file
+"/home/josh/ComArch/FPGA_Study/Verilog_files/timer/display_7_seg.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "timer_ucf.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "switch_add" LOC = P137 |>
+   [timer_ucf.ucf(3)]: NET "switch_add" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "switch_add" LOC = P137 |> [timer_ucf.ucf(3)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [timer_ucf.ucf(3)]: NET
+   "switch_add" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "switch_subtract" LOC = p139 |>
+   [timer_ucf.ucf(4)]: NET "switch_subtract" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "switch_subtract" LOC = p139 |> [timer_ucf.ucf(4)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [timer_ucf.ucf(4)]: NET
+   "switch_subtract" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "switch_clear" LOC = P138 |>
+   [timer_ucf.ucf(5)]: NET "switch_clear" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "switch_clear" LOC = P138 |> [timer_ucf.ucf(5)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [timer_ucf.ucf(5)]: NET
+   "switch_clear" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "switch_start" LOC = p140 |>
+   [timer_ucf.ucf(6)]: NET "switch_start" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "switch_start" LOC = p140 |> [timer_ucf.ucf(6)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [timer_ucf.ucf(6)]: NET
+   "switch_start" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "BUZZER" LOC = P97;>
+   [timer_ucf.ucf(22)]: NET "BUZZER" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "BUZZER" LOC = P97;> [timer_ucf.ucf(22)]' could not be found and so the
+   Locate constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     9
+  Number of warnings:   5
+
+Total memory usage is 402560 kilobytes
+
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   1 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "display_7_seg.bld"...

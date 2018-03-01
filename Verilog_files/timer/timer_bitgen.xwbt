@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/josh/ComArch/FPGA_Study/Verilog_files/timer/timer.ncd
+OUTFILE=/home/josh/ComArch/FPGA_Study/Verilog_files/timer/timer.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/josh/ComArch/FPGA_Study/Verilog_files/timer
+LICENSE=WebPack
+USER_INFO=211475887_0_0_838
