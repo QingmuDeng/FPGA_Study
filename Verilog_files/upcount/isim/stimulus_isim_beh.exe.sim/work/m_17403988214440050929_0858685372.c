@@ -22,13 +22,28 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "/home/josh/ComArch/FPGA_Study/Verilog_files/upcount/upcount.v";
-static int ng1[] = {1, 0};
-static unsigned int ng2[] = {9U, 0U};
-static int ng3[] = {0, 0};
+static int ng1[] = {0, 0};
+static int ng2[] = {1, 0};
+static unsigned int ng3[] = {9U, 0U};
 
 
 
-static void Always_26_0(char *t0)
+static void Initial_26_0(char *t0)
+{
+    char *t1;
+    char *t2;
+
+LAB0:    xsi_set_current_line(26, ng0);
+
+LAB2:    xsi_set_current_line(27, ng0);
+    t1 = ((char*)((ng1)));
+    t2 = (t0 + 1448);
+    xsi_vlogvar_assign_value(t2, t1, 0, 0, 4);
+
+LAB1:    return;
+}
+
+static void Always_30_1(char *t0)
 {
     char t8[8];
     char *t1;
@@ -60,37 +75,37 @@ static void Always_26_0(char *t0)
     char *t28;
     char *t29;
 
-LAB0:    t1 = (t0 + 2360U);
+LAB0:    t1 = (t0 + 2608U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(26, ng0);
-    t2 = (t0 + 2680);
+LAB2:    xsi_set_current_line(30, ng0);
+    t2 = (t0 + 2928);
     *((int *)t2) = 1;
-    t3 = (t0 + 2392);
+    t3 = (t0 + 2640);
     *((char **)t3) = t2;
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(26, ng0);
+LAB4:    xsi_set_current_line(30, ng0);
 
-LAB5:    xsi_set_current_line(27, ng0);
+LAB5:    xsi_set_current_line(31, ng0);
     t4 = (t0 + 1448);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
-    t7 = ((char*)((ng1)));
+    t7 = ((char*)((ng2)));
     memset(t8, 0, 8);
     xsi_vlog_unsigned_add(t8, 32, t6, 4, t7, 32);
     t9 = (t0 + 1448);
     xsi_vlogvar_wait_assign_value(t9, t8, 0, 0, 4, 0LL);
-    xsi_set_current_line(28, ng0);
+    xsi_set_current_line(32, ng0);
     t2 = (t0 + 1448);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
-    t5 = ((char*)((ng2)));
+    t5 = ((char*)((ng3)));
     memset(t8, 0, 8);
     t6 = (t4 + 4);
     t7 = (t5 + 4);
@@ -131,10 +146,10 @@ LAB8:    t9 = (t8 + 4);
     *((unsigned int *)t9) = 1;
     goto LAB9;
 
-LAB10:    xsi_set_current_line(28, ng0);
+LAB10:    xsi_set_current_line(32, ng0);
 
-LAB13:    xsi_set_current_line(29, ng0);
-    t28 = ((char*)((ng3)));
+LAB13:    xsi_set_current_line(33, ng0);
+    t28 = ((char*)((ng1)));
     t29 = (t0 + 1448);
     xsi_vlogvar_wait_assign_value(t29, t28, 0, 0, 4, 0LL);
     goto LAB12;
@@ -144,7 +159,7 @@ LAB13:    xsi_set_current_line(29, ng0);
 
 extern void work_m_17403988214440050929_0858685372_init()
 {
-	static char *pe[] = {(void *)Always_26_0};
+	static char *pe[] = {(void *)Initial_26_0,(void *)Always_30_1};
 	xsi_register_didat("work_m_17403988214440050929_0858685372", "isim/stimulus_isim_beh.exe.sim/work/m_17403988214440050929_0858685372.didat");
 	xsi_register_executes(pe);
 }

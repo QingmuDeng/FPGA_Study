@@ -39,7 +39,7 @@ module stimulus;
 	initial begin
 		// Initialize Inputs
 		CLK = 0;
-
+		
 		// Wait 100 ns for global reset to finish
 		#100;
         

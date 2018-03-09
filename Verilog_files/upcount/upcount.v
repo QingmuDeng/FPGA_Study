@@ -23,6 +23,10 @@ module upcount(
 	output reg [3:0] units
 	);
 	
+	initial begin
+	units = 0;
+	end
+	
 	always@(posedge CLK) begin
 			units <= units + 1;
 			if (units == 4'd9) begin
