@@ -9,7 +9,7 @@ Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into li
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 94672 KB
-Fuse CPU Usage: 970 ms
+Fuse CPU Usage: 900 ms
 Compiling module DFF
 Compiling module stimulus
 Compiling module glbl
@@ -18,5 +18,5 @@ Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
 Built simulation executable /home/josh/ComArch/FPGA_Study/Verilog_files/DFF/stimulus_isim_beh.exe
 Fuse Memory Usage: 1179144 KB
-Fuse CPU Usage: 990 ms
-GCC CPU Usage: 170 ms
+Fuse CPU Usage: 910 ms
+GCC CPU Usage: 180 ms

@@ -2,9 +2,9 @@ Command line:
    stimulus_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  34293
+     -socket  34383
 
-Fri Mar  9 21:26:03 2018
+Sat Mar 10 22:49:57 2018
 
 
  Elaboration Time: 0.02 sec
@@ -21,9 +21,9 @@ Fri Mar  9 21:26:03 2018
  Total Scalar Nets and Variables : 103
 Total Line Count : 26
 
- Total Simulation Time: 0.06 sec
+ Total Simulation Time: 0.3 sec
 
  Current Memory Usage: 315.679 Meg
 
-Fri Mar  9 21:27:54 2018
+Sat Mar 10 22:51:36 2018
 

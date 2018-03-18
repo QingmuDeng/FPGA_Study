@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/josh/ComArch/FPGA_Study/Verilog_files/two_bit_decoder/stimulus_isim_beh.exe" -prj "/home/josh/ComArch/FPGA_Study/Verilog_files/two_bit_decoder/stimulus_beh.prj" "stimulus" "work.glbl" 

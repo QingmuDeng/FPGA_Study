@@ -1,0 +1,97 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x15ac6a0 .scope module, "decoder_test" "decoder_test" 2 4;
+ .timescale -9 -12;
+v0x15c5fa0_0 .var "address0", 0 0;
+v0x15c6040_0 .var "address1", 0 0;
+v0x15c60f0_0 .var "enable", 0 0;
+v0x15c61a0_0 .net "out0", 0 0, L_0x15c6840; 1 drivers
+v0x15c6280_0 .net "out1", 0 0, L_0x15c69d0; 1 drivers
+v0x15c6330_0 .net "out2", 0 0, L_0x15c6ac0; 1 drivers
+v0x15c63b0_0 .net "out3", 0 0, L_0x15c6c80; 1 drivers
+S_0x15ac790 .scope module, "dut" "structuralDecoder" 2 9, 3 19, S_0x15ac6a0;
+ .timescale -9 -12;
+L_0x15c6460/d .functor NOT 1, v0x15c5fa0_0, C4<0>, C4<0>, C4<0>;
+L_0x15c6460 .delay (5000,5000,5000) L_0x15c6460/d;
+L_0x15c6570/d .functor NOT 1, v0x15c6040_0, C4<0>, C4<0>, C4<0>;
+L_0x15c6570 .delay (5000,5000,5000) L_0x15c6570/d;
+L_0x15c6660/d .functor AND 1, v0x15c60f0_0, L_0x15c6570, C4<1>, C4<1>;
+L_0x15c6660 .delay (5000,5000,5000) L_0x15c6660/d;
+L_0x15c67a0/d .functor AND 1, v0x15c60f0_0, v0x15c6040_0, C4<1>, C4<1>;
+L_0x15c67a0 .delay (5000,5000,5000) L_0x15c67a0/d;
+L_0x15c6840/d .functor AND 1, L_0x15c6660, L_0x15c6460, C4<1>, C4<1>;
+L_0x15c6840 .delay (5000,5000,5000) L_0x15c6840/d;
+L_0x15c69d0/d .functor AND 1, L_0x15c6660, v0x15c5fa0_0, C4<1>, C4<1>;
+L_0x15c69d0 .delay (5000,5000,5000) L_0x15c69d0/d;
+L_0x15c6ac0/d .functor AND 1, L_0x15c67a0, L_0x15c6460, C4<1>, C4<1>;
+L_0x15c6ac0 .delay (5000,5000,5000) L_0x15c6ac0/d;
+L_0x15c6c80/d .functor AND 1, L_0x15c67a0, v0x15c5fa0_0, C4<1>, C4<1>;
+L_0x15c6c80 .delay (5000,5000,5000) L_0x15c6c80/d;
+v0x1575170_0 .net "A", 0 0, L_0x15c6660; 1 drivers
+v0x15c5860_0 .net "B", 0 0, L_0x15c67a0; 1 drivers
+v0x15c5900_0 .net "_address0", 0 0, L_0x15c6460; 1 drivers
+v0x15c59a0_0 .net "_address1", 0 0, L_0x15c6570; 1 drivers
+v0x15c5a50_0 .net "address0", 0 0, v0x15c5fa0_0; 1 drivers
+v0x15c5af0_0 .net "address1", 0 0, v0x15c6040_0; 1 drivers
+v0x15c5bd0_0 .net "enable", 0 0, v0x15c60f0_0; 1 drivers
+v0x15c5c70_0 .alias "out0", 0 0, v0x15c61a0_0;
+v0x15c5d60_0 .alias "out1", 0 0, v0x15c6280_0;
+v0x15c5e00_0 .alias "out2", 0 0, v0x15c6330_0;
+v0x15c5f00_0 .alias "out3", 0 0, v0x15c63b0_0;
+    .scope S_0x15ac6a0;
+T_0 ;
+    %vpi_call 2 15 "$display", "E A0 A1  | Q0 Q1 Q2 Q3";
+    %set/v v0x15c60f0_0, 1, 1;
+    %set/v v0x15c5fa0_0, 0, 1;
+    %set/v v0x15c6040_0, 0, 1;
+    %delay 100000, 0;
+    %vpi_call 2 17 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x15c60f0_0, v0x15c5fa0_0, v0x15c6040_0, v0x15c61a0_0, v0x15c6280_0, v0x15c6330_0, v0x15c63b0_0;
+    %set/v v0x15c60f0_0, 1, 1;
+    %set/v v0x15c5fa0_0, 1, 1;
+    %set/v v0x15c6040_0, 0, 1;
+    %delay 100000, 0;
+    %vpi_call 2 19 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x15c60f0_0, v0x15c5fa0_0, v0x15c6040_0, v0x15c61a0_0, v0x15c6280_0, v0x15c6330_0, v0x15c63b0_0;
+    %set/v v0x15c60f0_0, 1, 1;
+    %set/v v0x15c5fa0_0, 0, 1;
+    %set/v v0x15c6040_0, 1, 1;
+    %delay 100000, 0;
+    %vpi_call 2 21 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x15c60f0_0, v0x15c5fa0_0, v0x15c6040_0, v0x15c61a0_0, v0x15c6280_0, v0x15c6330_0, v0x15c63b0_0;
+    %set/v v0x15c60f0_0, 1, 1;
+    %set/v v0x15c5fa0_0, 1, 1;
+    %set/v v0x15c6040_0, 1, 1;
+    %delay 100000, 0;
+    %vpi_call 2 23 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x15c60f0_0, v0x15c5fa0_0, v0x15c6040_0, v0x15c61a0_0, v0x15c6280_0, v0x15c6330_0, v0x15c63b0_0;
+    %set/v v0x15c60f0_0, 0, 1;
+    %set/v v0x15c5fa0_0, 0, 1;
+    %set/v v0x15c6040_0, 0, 1;
+    %delay 100000, 0;
+    %vpi_call 2 25 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x15c60f0_0, v0x15c5fa0_0, v0x15c6040_0, v0x15c61a0_0, v0x15c6280_0, v0x15c6330_0, v0x15c63b0_0;
+    %set/v v0x15c60f0_0, 0, 1;
+    %set/v v0x15c5fa0_0, 1, 1;
+    %set/v v0x15c6040_0, 0, 1;
+    %delay 100000, 0;
+    %vpi_call 2 27 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x15c60f0_0, v0x15c5fa0_0, v0x15c6040_0, v0x15c61a0_0, v0x15c6280_0, v0x15c6330_0, v0x15c63b0_0;
+    %set/v v0x15c60f0_0, 0, 1;
+    %set/v v0x15c5fa0_0, 0, 1;
+    %set/v v0x15c6040_0, 1, 1;
+    %delay 100000, 0;
+    %vpi_call 2 29 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x15c60f0_0, v0x15c5fa0_0, v0x15c6040_0, v0x15c61a0_0, v0x15c6280_0, v0x15c6330_0, v0x15c63b0_0;
+    %set/v v0x15c60f0_0, 0, 1;
+    %set/v v0x15c5fa0_0, 1, 1;
+    %set/v v0x15c6040_0, 1, 1;
+    %delay 100000, 0;
+    %vpi_call 2 31 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x15c60f0_0, v0x15c5fa0_0, v0x15c6040_0, v0x15c61a0_0, v0x15c6280_0, v0x15c6330_0, v0x15c63b0_0;
+    %vpi_call 2 33 "$dumpfile", "decoder.vcd";
+    %vpi_call 2 35 "$dumpvars";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "decoder.t.v";
+    "./decoder.v";

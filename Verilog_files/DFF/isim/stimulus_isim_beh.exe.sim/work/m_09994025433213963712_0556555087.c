@@ -27,11 +27,11 @@ static int ng2[] = {0, 0};
 static int ng3[] = {10, 0};
 static int ng4[] = {1, 0};
 
-void Monitor_63_3(char *);
-void Monitor_63_3(char *);
+void Monitor_65_3(char *);
+void Monitor_65_3(char *);
 
 
-static void Monitor_63_3_Func(char *t0)
+static void Monitor_65_3_Func(char *t0)
 {
     char *t1;
     char *t2;
@@ -232,17 +232,17 @@ LAB14:    xsi_set_current_line(55, ng1);
     t16 = ((char*)((ng2)));
     t17 = (t0 + 1768);
     xsi_vlogvar_wait_assign_value(t17, t16, 0, 0, 1, 0LL);
-    xsi_set_current_line(56, ng1);
+    xsi_set_current_line(57, ng1);
     t2 = (t0 + 2896);
     xsi_process_wait(t2, 15000LL);
     *((char **)t1) = &&LAB15;
     goto LAB1;
 
-LAB15:    xsi_set_current_line(57, ng1);
+LAB15:    xsi_set_current_line(58, ng1);
     t2 = ((char*)((ng4)));
     t3 = (t0 + 1768);
     xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 1, 0LL);
-    xsi_set_current_line(58, ng1);
+    xsi_set_current_line(60, ng1);
     t2 = (t0 + 2896);
     xsi_process_wait(t2, 15000LL);
     *((char **)t1) = &&LAB16;
@@ -261,25 +261,25 @@ LAB16:    xsi_set_current_line(54, ng1);
 
 }
 
-static void Initial_62_2(char *t0)
+static void Initial_64_2(char *t0)
 {
 
-LAB0:    xsi_set_current_line(62, ng1);
+LAB0:    xsi_set_current_line(64, ng1);
 
-LAB2:    xsi_set_current_line(63, ng1);
-    Monitor_63_3(t0);
+LAB2:    xsi_set_current_line(65, ng1);
+    Monitor_65_3(t0);
 
 LAB1:    return;
 }
 
-void Monitor_63_3(char *t0)
+void Monitor_65_3(char *t0)
 {
     char *t1;
     char *t2;
 
 LAB0:    t1 = (t0 + 3392);
     t2 = (t0 + 3904);
-    xsi_vlogfile_monitor((void *)Monitor_63_3_Func, t1, t2);
+    xsi_vlogfile_monitor((void *)Monitor_65_3_Func, t1, t2);
 
 LAB1:    return;
 }
@@ -287,7 +287,7 @@ LAB1:    return;
 
 extern void work_m_09994025433213963712_0556555087_init()
 {
-	static char *pe[] = {(void *)Always_44_0,(void *)Initial_45_1,(void *)Initial_62_2,(void *)Monitor_63_3};
+	static char *pe[] = {(void *)Always_44_0,(void *)Initial_45_1,(void *)Initial_64_2,(void *)Monitor_65_3};
 	xsi_register_didat("work_m_09994025433213963712_0556555087", "isim/stimulus_isim_beh.exe.sim/work/m_09994025433213963712_0556555087.didat");
 	xsi_register_executes(pe);
 }
