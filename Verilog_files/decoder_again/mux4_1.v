@@ -1,9 +1,9 @@
-`define AND and #5
-`define OR or #5
-`define NOT not #5
-`define NAND nand #5
-`define XOR xor #5
-`define NOR nor #5
+`define AND and #30
+`define OR or #30
+`define NOT not #10
+`define NAND nand #20
+`define XOR xor #30
+`define NOR nor #20
 
 // module behavioralMultiplexer
 // (
@@ -35,13 +35,13 @@ module structuralMultiplexer
     `AND addr0low1low(addr0010, _address0, _address1);
     `AND in0and(orIn0, addr0010, in0);
 
-    `AND addr0low1low(addr0110, _address0, _address1);
+    `AND addr0high1low(addr0110, address0, _address1);
     `AND in0and(orIn1, addr0110, in1);
 
-    `AND addr0low1low(addr0011, _address0, _address1);
+    `AND addr0low1high(addr0011, _address0, address1);
     `AND in0and(orIn2, addr0011, in2);
 
-    `AND addr0low1low(addr0111, _address0, _address1);
+    `AND addr0high1high(addr0111, address0, address1);
     `AND in0and(orIn3, addr0111, in3);
 
 

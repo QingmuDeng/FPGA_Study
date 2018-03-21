@@ -14,23 +14,26 @@ module testMultiplexer ();
   );
 
   initial begin
-    $display("E A0 A1  | Q0 Q1 Q2 Q3");
-    enable=1; address0=0; address1=0; #100
-    $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
-    enable=1; address0=1; address1=0; #100
-    $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
-    enable=1; address0=0; address1=1; #100
-    $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
-    enable=1; address0=1; address1=1; #100
-    $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
-    enable=0; address0=0; address1=0; #100
-    $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
-    enable=0; address0=1; address1=0; #100
-    $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
-    enable=0; address0=0; address1=1; #100
-    $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
-    enable=0; address0=1; address1=1; #100
-    $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
+    $dumpfile("mux4_1.vcd");
+    $dumpvars(0, dut);
+
+    $display("Q A0 A1  | I0 I1 I2 I3");
+    address0=0; address1=0; in0=0; in1=1; in2=1; in3=1;#200
+    $display("%d  %d  %d  |  %d  %d  %d  %d", out, address0, address1, in0, in1, in2, in3);
+    address0=0; address1=0; in0=1; in1=1; in2=1; in3=1;#200
+    $display("%d  %d  %d  |  %d  %d  %d  %d", out, address0, address1, in0, in1, in2, in3);
+    address0=1; address1=0; in0=1; in1=0; in2=1; in3=1;#200
+    $display("%d  %d  %d  |  %d  %d  %d  %d", out, address0, address1, in0, in1, in2, in3);
+    address0=1; address1=0; in0=1; in1=1; in2=1; in3=1;#200
+    $display("%d  %d  %d  |  %d  %d  %d  %d", out, address0, address1, in0, in1, in2, in3);
+    address0=0; address1=1; in0=1; in1=1; in2=0; in3=1;#200
+    $display("%d  %d  %d  |  %d  %d  %d  %d", out, address0, address1, in0, in1, in2, in3);
+    address0=0; address1=1; in0=1; in1=1; in2=1; in3=1;#200
+    $display("%d  %d  %d  |  %d  %d  %d  %d", out, address0, address1, in0, in1, in2, in3);
+    address0=1; address1=1; in0=1; in1=1; in2=1; in3=0;#200
+    $display("%d  %d  %d  |  %d  %d  %d  %d", out, address0, address1, in0, in1, in2, in3);
+    address0=1; address1=1; in0=1; in1=1; in2=1; in3=1;#200
+    $display("%d  %d  %d  |  %d  %d  %d  %d", out, address0, address1, in0, in1, in2, in3);
   end
 
 

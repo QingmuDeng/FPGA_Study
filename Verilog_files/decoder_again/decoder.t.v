@@ -11,6 +11,9 @@ module decoder_test();
 
   initial begin
 
+    $dumpfile("decoder.vcd");
+    // $dumpfile("test.vcd");
+    $dumpvars(0, dut);
 
     $display("E A0 A1  | Q0 Q1 Q2 Q3");
     enable=1; address0=0; address1=0; #100
@@ -30,8 +33,5 @@ module decoder_test();
     enable=0; address0=1; address1=1; #100
     $display("%d  %d  %d  |  %d  %d  %d  %d", enable, address0, address1, out0, out1, out2, out3);
 
-    $dumpfile("decoder.vcd");
-    // $dumpfile("test.vcd");
-    $dumpvars;
   end
 endmodule

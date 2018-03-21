@@ -1,0 +1,139 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x124c730 .scope module, "testMultiplexer" "testMultiplexer" 2 4;
+ .timescale -9 -12;
+v0x12a38c0_0 .var "address0", 0 0;
+v0x12a3940_0 .var "address1", 0 0;
+v0x12a39c0_0 .var "in0", 0 0;
+v0x12a3a70_0 .var "in1", 0 0;
+v0x12a3b50_0 .var "in2", 0 0;
+v0x12a3c00_0 .var "in3", 0 0;
+v0x12a3c80_0 .net "out", 0 0, L_0x12a4810; 1 drivers
+S_0x124c820 .scope module, "dut" "structuralMultiplexer" 2 9, 3 21, S_0x124c730;
+ .timescale -9 -12;
+L_0x12a3140/d .functor NOT 1, v0x12a38c0_0, C4<0>, C4<0>, C4<0>;
+L_0x12a3140 .delay (10000,10000,10000) L_0x12a3140/d;
+L_0x12a3df0/d .functor NOT 1, v0x12a3940_0, C4<0>, C4<0>, C4<0>;
+L_0x12a3df0 .delay (10000,10000,10000) L_0x12a3df0/d;
+L_0x12a3ee0/d .functor AND 1, L_0x12a3140, L_0x12a3df0, C4<1>, C4<1>;
+L_0x12a3ee0 .delay (30000,30000,30000) L_0x12a3ee0/d;
+L_0x12a4020/d .functor AND 1, L_0x12a3ee0, v0x12a39c0_0, C4<1>, C4<1>;
+L_0x12a4020 .delay (30000,30000,30000) L_0x12a4020/d;
+L_0x12a4160/d .functor AND 1, v0x12a38c0_0, L_0x12a3df0, C4<1>, C4<1>;
+L_0x12a4160 .delay (30000,30000,30000) L_0x12a4160/d;
+L_0x12a4200/d .functor AND 1, L_0x12a4160, v0x12a3a70_0, C4<1>, C4<1>;
+L_0x12a4200 .delay (30000,30000,30000) L_0x12a4200/d;
+L_0x12a4380/d .functor AND 1, L_0x12a3140, v0x12a3940_0, C4<1>, C4<1>;
+L_0x12a4380 .delay (30000,30000,30000) L_0x12a4380/d;
+L_0x12a4420/d .functor AND 1, L_0x12a4380, v0x12a3b50_0, C4<1>, C4<1>;
+L_0x12a4420 .delay (30000,30000,30000) L_0x12a4420/d;
+L_0x12a4560/d .functor AND 1, v0x12a38c0_0, v0x12a3940_0, C4<1>, C4<1>;
+L_0x12a4560 .delay (30000,30000,30000) L_0x12a4560/d;
+L_0x12a4700/d .functor AND 1, L_0x12a4560, v0x12a3c00_0, C4<1>, C4<1>;
+L_0x12a4700 .delay (30000,30000,30000) L_0x12a4700/d;
+L_0x12a4870/d .functor OR 1, L_0x12a4020, L_0x12a4200, C4<0>, C4<0>;
+L_0x12a4870 .delay (30000,30000,30000) L_0x12a4870/d;
+L_0x12a4980/d .functor OR 1, L_0x12a4420, L_0x12a4870, C4<0>, C4<0>;
+L_0x12a4980 .delay (30000,30000,30000) L_0x12a4980/d;
+L_0x12a4810/d .functor OR 1, L_0x12a4980, L_0x12a4700, C4<0>, C4<0>;
+L_0x12a4810 .delay (30000,30000,30000) L_0x12a4810/d;
+v0x124c170_0 .net "_address0", 0 0, L_0x12a3140; 1 drivers
+v0x12a2b20_0 .net "_address1", 0 0, L_0x12a3df0; 1 drivers
+v0x12a2bc0_0 .net "addr0010", 0 0, L_0x12a3ee0; 1 drivers
+v0x12a2c60_0 .net "addr0011", 0 0, L_0x12a4380; 1 drivers
+v0x12a2d10_0 .net "addr0110", 0 0, L_0x12a4160; 1 drivers
+v0x12a2db0_0 .net "addr0111", 0 0, L_0x12a4560; 1 drivers
+v0x12a2e90_0 .net "address0", 0 0, v0x12a38c0_0; 1 drivers
+v0x12a2f30_0 .net "address1", 0 0, v0x12a3940_0; 1 drivers
+v0x12a3020_0 .net "in0", 0 0, v0x12a39c0_0; 1 drivers
+v0x12a30c0_0 .net "in1", 0 0, v0x12a3a70_0; 1 drivers
+v0x12a31c0_0 .net "in2", 0 0, v0x12a3b50_0; 1 drivers
+v0x12a3260_0 .net "in3", 0 0, v0x12a3c00_0; 1 drivers
+v0x12a3370_0 .net "or01", 0 0, L_0x12a4870; 1 drivers
+v0x12a3410_0 .net "or012", 0 0, L_0x12a4980; 1 drivers
+v0x12a3530_0 .net "orIn0", 0 0, L_0x12a4020; 1 drivers
+v0x12a35d0_0 .net "orIn1", 0 0, L_0x12a4200; 1 drivers
+v0x12a3490_0 .net "orIn2", 0 0, L_0x12a4420; 1 drivers
+v0x12a3720_0 .net "orIn3", 0 0, L_0x12a4700; 1 drivers
+v0x12a3840_0 .alias "out", 0 0, v0x12a3c80_0;
+    .scope S_0x124c730;
+T_0 ;
+    %vpi_call 2 17 "$dumpfile", "mux4_1.vcd";
+    %vpi_call 2 18 "$dumpvars", 1'sb0, S_0x124c820;
+    %vpi_call 2 20 "$display", "Q A0 A1  | I0 I1 I2 I3";
+    %set/v v0x12a38c0_0, 0, 1;
+    %set/v v0x12a3940_0, 0, 1;
+    %set/v v0x12a39c0_0, 0, 1;
+    %set/v v0x12a3a70_0, 1, 1;
+    %set/v v0x12a3b50_0, 1, 1;
+    %set/v v0x12a3c00_0, 1, 1;
+    %delay 200000, 0;
+    %vpi_call 2 22 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x12a3c80_0, v0x12a38c0_0, v0x12a3940_0, v0x12a39c0_0, v0x12a3a70_0, v0x12a3b50_0, v0x12a3c00_0;
+    %set/v v0x12a38c0_0, 0, 1;
+    %set/v v0x12a3940_0, 0, 1;
+    %set/v v0x12a39c0_0, 1, 1;
+    %set/v v0x12a3a70_0, 1, 1;
+    %set/v v0x12a3b50_0, 1, 1;
+    %set/v v0x12a3c00_0, 1, 1;
+    %delay 200000, 0;
+    %vpi_call 2 24 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x12a3c80_0, v0x12a38c0_0, v0x12a3940_0, v0x12a39c0_0, v0x12a3a70_0, v0x12a3b50_0, v0x12a3c00_0;
+    %set/v v0x12a38c0_0, 1, 1;
+    %set/v v0x12a3940_0, 0, 1;
+    %set/v v0x12a39c0_0, 1, 1;
+    %set/v v0x12a3a70_0, 0, 1;
+    %set/v v0x12a3b50_0, 1, 1;
+    %set/v v0x12a3c00_0, 1, 1;
+    %delay 200000, 0;
+    %vpi_call 2 26 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x12a3c80_0, v0x12a38c0_0, v0x12a3940_0, v0x12a39c0_0, v0x12a3a70_0, v0x12a3b50_0, v0x12a3c00_0;
+    %set/v v0x12a38c0_0, 1, 1;
+    %set/v v0x12a3940_0, 0, 1;
+    %set/v v0x12a39c0_0, 1, 1;
+    %set/v v0x12a3a70_0, 1, 1;
+    %set/v v0x12a3b50_0, 1, 1;
+    %set/v v0x12a3c00_0, 1, 1;
+    %delay 200000, 0;
+    %vpi_call 2 28 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x12a3c80_0, v0x12a38c0_0, v0x12a3940_0, v0x12a39c0_0, v0x12a3a70_0, v0x12a3b50_0, v0x12a3c00_0;
+    %set/v v0x12a38c0_0, 0, 1;
+    %set/v v0x12a3940_0, 1, 1;
+    %set/v v0x12a39c0_0, 1, 1;
+    %set/v v0x12a3a70_0, 1, 1;
+    %set/v v0x12a3b50_0, 0, 1;
+    %set/v v0x12a3c00_0, 1, 1;
+    %delay 200000, 0;
+    %vpi_call 2 30 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x12a3c80_0, v0x12a38c0_0, v0x12a3940_0, v0x12a39c0_0, v0x12a3a70_0, v0x12a3b50_0, v0x12a3c00_0;
+    %set/v v0x12a38c0_0, 0, 1;
+    %set/v v0x12a3940_0, 1, 1;
+    %set/v v0x12a39c0_0, 1, 1;
+    %set/v v0x12a3a70_0, 1, 1;
+    %set/v v0x12a3b50_0, 1, 1;
+    %set/v v0x12a3c00_0, 1, 1;
+    %delay 200000, 0;
+    %vpi_call 2 32 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x12a3c80_0, v0x12a38c0_0, v0x12a3940_0, v0x12a39c0_0, v0x12a3a70_0, v0x12a3b50_0, v0x12a3c00_0;
+    %set/v v0x12a38c0_0, 1, 1;
+    %set/v v0x12a3940_0, 1, 1;
+    %set/v v0x12a39c0_0, 1, 1;
+    %set/v v0x12a3a70_0, 1, 1;
+    %set/v v0x12a3b50_0, 1, 1;
+    %set/v v0x12a3c00_0, 0, 1;
+    %delay 200000, 0;
+    %vpi_call 2 34 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x12a3c80_0, v0x12a38c0_0, v0x12a3940_0, v0x12a39c0_0, v0x12a3a70_0, v0x12a3b50_0, v0x12a3c00_0;
+    %set/v v0x12a38c0_0, 1, 1;
+    %set/v v0x12a3940_0, 1, 1;
+    %set/v v0x12a39c0_0, 1, 1;
+    %set/v v0x12a3a70_0, 1, 1;
+    %set/v v0x12a3b50_0, 1, 1;
+    %set/v v0x12a3c00_0, 1, 1;
+    %delay 200000, 0;
+    %vpi_call 2 36 "$display", "%d  %d  %d  |  %d  %d  %d  %d", v0x12a3c80_0, v0x12a38c0_0, v0x12a3940_0, v0x12a39c0_0, v0x12a3a70_0, v0x12a3b50_0, v0x12a3c00_0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux4_1.t.v";
+    "./mux4_1.v";

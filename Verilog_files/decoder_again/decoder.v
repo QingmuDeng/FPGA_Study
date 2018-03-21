@@ -1,9 +1,9 @@
-`define AND and #5
-`define OR or #5
-`define NOT not #5
-`define NAND nand #5
-`define XOR xor #5
-`define NOR nor #5
+`define AND and #30
+`define OR or #30
+`define NOT not #10
+`define NAND nand #20
+`define XOR xor #30
+`define NOR nor #20
 
 // module behavioralDecoder
 // (
