@@ -1,0 +1,92 @@
+$date
+	Tue Apr  3 00:35:21 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testTwoBitAdder $end
+$scope module dut $end
+$var wire 1 ! C0 $end
+$var wire 1 " C1 $end
+$var wire 1 # Cin0 $end
+$var wire 1 $ Cin0_new $end
+$var wire 2 % a [1:0] $end
+$var wire 2 & b [1:0] $end
+$var wire 1 ' b_new_0 $end
+$var wire 1 ( b_new_1 $end
+$var wire 1 ) subtract $end
+$var wire 1 * sum0 $end
+$var wire 1 + sum1 $end
+$scope module adder0 $end
+$var wire 1 , a $end
+$var wire 1 ' b $end
+$var wire 1 $ carryin $end
+$var wire 1 ! carryout $end
+$var wire 1 * sum $end
+$upscope $end
+$scope module adder1 $end
+$var wire 1 - a $end
+$var wire 1 ( b $end
+$var wire 1 ! carryin $end
+$var wire 1 " carryout $end
+$var wire 1 + sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+b0 &
+b0 %
+0$
+0#
+0"
+0!
+$end
+#100000
+1*
+1,
+b1 %
+#200000
+1'
+1*
+0,
+b1 &
+b0 %
+#300000
+1"
+1(
+0+
+1-
+b11 &
+b10 %
+#400000
+1+
+0*
+1!
+1,
+b11 %
+#500000
+0+
+0(
+b1 &
+#600000
+1*
+0!
+0'
+1(
+1$
+0,
+1)
+b10 %
+#700000
