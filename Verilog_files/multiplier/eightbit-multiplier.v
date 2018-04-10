@@ -1,6 +1,6 @@
 `include "fourbit-adder.v"
 
-module sixtn_multiplier(
+module eightbit_multiplier(
     input [3:0] A,
     input [3:0] B,
     output [7:0] P
@@ -11,6 +11,8 @@ wire [3:0] out_B1A;
 wire [3:0] out_B2A;
 wire [3:0] out_B3A;
 wire [3:0] sum0;
+wire [3:0] sum1;
+wire [3:0] sum2;
 wire [2:0] Cout;
 
 and andB0A0(out_B0A[0], A[0], B[0]);
@@ -33,9 +35,11 @@ and andB3A1(out_B3A[1], A[1], B[3]);
 and andB3A2(out_B3A[2], A[2], B[3]);
 and andB3A3(out_B3A[3], A[3], B[3]);
 
-assign a = {0, {A[3:1]}};
-fourBitAdder adder0(a, andB1A0, 0, 0, Cout[0], sum0);
 
+fourBitAdder adder0({1'b0, A[3:1]}, out_B0A, 0, 0, Cout[0], sum0);
+fourBitAdder adder1({Cout[0],sum0[3:1]}, out_B1A, 0, 0, Cout[1], sum1);
+fourBitAdder adder2({Cout[1],sum1[3:1]}, out_B2A, 0, 0, Cout[2], sum2);
 
+assign P = {Cout[2], sum2, sum1[0], sum0[0], out_B0A[0]};
 
 endmodule

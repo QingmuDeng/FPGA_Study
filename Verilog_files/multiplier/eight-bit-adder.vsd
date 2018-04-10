@@ -1,5 +1,5 @@
 $date
-	Tue Apr 10 12:06:32 2018
+	Tue Apr 10 16:48:58 2018
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1ps
 $end
-$scope module testEightBitAdder $end
+$scope module testFourBitAdder $end
 $scope module dut $end
 $var wire 3 ! C [2:0] $end
 $var wire 1 " Cin0 $end
@@ -64,18 +64,18 @@ $dumpvars
 13
 02
 01
-10
-0/
-1.
+00
+1/
+0.
 0-
-1,
+0,
 0+
 b0 *
-b111 )
+b110 )
 0(
-b11 '
-b11 &
-b100 %
+b0 '
+b0 &
+b110 %
 0$
 0#
 0"
