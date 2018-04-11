@@ -36,9 +36,9 @@ and andB3A2(out_B3A[2], A[2], B[3]);
 and andB3A3(out_B3A[3], A[3], B[3]);
 
 
-fourBitAdder adder0({1'b0, A[3:1]}, out_B0A, 0, 0, Cout[0], sum0);
-fourBitAdder adder1({Cout[0],sum0[3:1]}, out_B1A, 0, 0, Cout[1], sum1);
-fourBitAdder adder2({Cout[1],sum1[3:1]}, out_B2A, 0, 0, Cout[2], sum2);
+fourBitAdder adder0({1'b0, A[3:1]}, out_B1A, 1'b0, 1'b0, Cout[0], sum0);
+fourBitAdder adder1({Cout[0],sum0[3:1]}, out_B2A, 1'b0, 1'b0, Cout[1], sum1);
+fourBitAdder adder2({Cout[1],sum1[3:1]}, out_B3A, 1'b0, 1'b0, Cout[2], sum2);
 
 assign P = {Cout[2], sum2, sum1[0], sum0[0], out_B0A[0]};
 

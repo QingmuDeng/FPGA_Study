@@ -12,7 +12,7 @@ module testEightBitAdder();
       $dumpfile("eightbit-multiplier.vsd");
       $dumpvars(0, dut);
       A = 4'b1101; B = 4'b1101; #100
-      $display("%b   %b  |   %b", A, B, P);
+      $display("%d   %d  |   %d", A, B, P);
       $display("%b", B[1]&&1'b1);
     end
 endmodule
