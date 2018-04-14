@@ -16,7 +16,7 @@ module testEightBitAdder();
     initial begin
       $dumpfile("eight-bit-adder.vsd");
       $dumpvars(0, dut);
-      a = 8'b00000010; b = 8'b00000010; Cin0 = 1'b0 ; subtract = 1'b0;#100
-      $display("%b  %b  %b    |  %b %b", a, b, subtract, C7, sum);
+      a = 8'b00111110; b = 8'b00000011; Cin0 = 1'b0 ; subtract = 1'b0;#100
+      $display("%d  %d  %b    |  %b %d", a, b, subtract, C7, sum);
     end
 endmodule
