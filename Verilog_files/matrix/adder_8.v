@@ -32,6 +32,4 @@ module eightBitAdder(
   behavioralFullAdder adder6(.sum(sum[6]), .carryout(C[6]), .a(a[6]), .b(b_new[6]), .carryin(C[5]));
   behavioralFullAdder adder7(.sum(sum[7]), .carryout(C7), .a(a[7]), .b(b_new[7]), .carryin(C[6]));
 
-  // endmodule
-
 endmodule

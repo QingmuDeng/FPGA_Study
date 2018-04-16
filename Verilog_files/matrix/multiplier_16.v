@@ -34,6 +34,7 @@ and andB0A5(out_B0A[5], A[5], B[0]);
 and andB0A6(out_B0A[6], A[6], B[0]);
 and andB0A7(out_B0A[7], A[7], B[0]);
 
+
 and andB1A0(out_B1A[0], A[0], B[1]);
 and andB1A1(out_B1A[1], A[1], B[1]);
 and andB1A2(out_B1A[2], A[2], B[1]);

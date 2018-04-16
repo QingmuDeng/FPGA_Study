@@ -7,6 +7,7 @@
 // `define XOR xor #30
 // `define NOR nor #20
 
+
 module behavioralFullAdder
 (
     output sum,

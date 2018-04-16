@@ -11,10 +11,10 @@ module testSixtnBitAdder();
     initial begin
       $dumpfile("sixtnBit-multiplier.vsd");
       $dumpvars(0, dut);
-      A = 8'd9; B = 8'd8; #100
-      $display("%d   %d  |   %d", A, B, P);
-      A = 8'd8; B = 8'd9; #100
-      $display("%d   %d  |   %d", A, B, P);
+      A = 8'd9; B = -1; #100
+      $display("%d   %d  |   %d", A, B, P[7:0]);
+      A = 8'd8; B = 8'd100; #100
+      $display("%d   %d  |   %d", A, B, P[7:0]);
       $display("%b", B[1]&&1'b1);
     end
 endmodule

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:31:13 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Sat Apr 14 16:11:12 2018
+# Process ID: 914
+# Current directory: /home/josh/ComArch/FPGA_Study/vivado_projects/zybo_getting_started/zybo_getting_started.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/josh/ComArch/FPGA_Study/vivado_projects/zybo_getting_started/zybo_getting_started.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/josh/ComArch/FPGA_Study/vivado_projects/zybo_getting_started/zybo_getting_started.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
